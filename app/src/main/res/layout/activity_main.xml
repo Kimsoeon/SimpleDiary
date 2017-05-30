@@ -9,19 +9,21 @@
     android:orientation="vertical">
 
     <DatePicker
+        android:id="@+id/date_pick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:calendarViewShown="false"
         android:datePickerMode="spinner"
         />
     <EditText
+        android:id="@+id/edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#f5d76d"
         android:lines="10"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/but"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
