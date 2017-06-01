@@ -50,10 +50,17 @@ public class MainActivity extends AppCompatActivity {
             fIn.read(buf);
             diaryStr = new String(buf).trim(); // 500바이트 읽어온걸 string으로 변환 trim은 앞뒤공간만 제거 가능
             but.setText("수정");
+
         } catch (FileNotFoundException e) { //파일못찾을떄
             edit.setText(fileName + "의 일기가 존재하지 않습니다.");
             but.setText("새로 저장");
         } catch (IOException e) { //읽어오다가 문제 생길 경우
+        }
+
+        try {
+            fIn.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return diaryStr;
     }
